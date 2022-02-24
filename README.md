@@ -2,7 +2,7 @@
 
 Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film man godt kan lide. Man skal kunne oprette film, tilføje plakater og lave integration til en filmdatabase, som kan trække information ud om hver film.
 
-> Opgaven er designet så den kan løses på et par timer.
+> Opgaven er designet så den kan løses på et par timer, men alle starter et forskelligt sted, i forhold til evner og erfaring. Hvis du er helt ny til Ruby og Rails er det helt okay, hvis du ender med at bruge lidt længere tid end forventet.
 > 
 > Vi bruger Replit som online kodemiljø, sådan at du ikke skal bruge kræfter på at installere Ruby og Rails lokalt på din egen computer. Din applikation kan skrives og køres direkte fra Replit (se _Rails on Replit_-afsnittet i bunden af guiden for flere detaljer).
 
@@ -18,7 +18,7 @@ Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film m
 *Titlen på filmen, et billede af filmplakaten, og lidt information trukket fra filmdatabasen (ingen krav om antal, kunne f.eks. være udgivelsesår, genre, skuespillere, osv.)*
 
 ### Frontend
-- Applikationen er allerede forudinstalleret med [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) 
+- Applikationen er allerede forudinstalleret med [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
 - Der er ikke nogle krav til æstetikken af frontenden. Applikationen skal blot være funktionel, og facilitere de krav der er nævnt under _Backend_-afsnittet.
 
 ### Tests
