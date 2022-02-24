@@ -9,16 +9,16 @@ Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film m
 ## Features
 
 ### Backend
-- Integration til en åben filmdatabase: [https://www.omdbapi.com](https://www.omdbapi.com/) (_Man skal bruge en API-nøgle til OMDb, når man integrerer. De uddeler kun 1.000 nøgler om dagen, så hvis det ikke lykkedes dig at få en, kan du (forhåbentlig) bruge denne: **7086c3d6**_)
+- Integration til en åben filmdatabase: [https://www.omdbapi.com](https://www.omdbapi.com/) (_Man skal bruge en API-nøgle til OMDb, når man integrerer. De uddeler kun 1.000 nøgler om dagen, så hvis det ikke lykkedes dig at få en, kan du bruge denne: **7086c3d6**_)
 - Der skal være en side til at vise alle de film man har oprettet
 - Der skal være en side til at oprette en ny film til samlingen
 - Der skal være en side til at redigere en film i samlingen
 - Det skal være muligt at slette en film fra samlingen
 - Der skal være en side til at præsentere filmen
-*Titlen på filmen, et billede af filmplakaten, og lidt information trukket fra filmdatabasen (ingen krav om antal, kunne f.eks. være udgivelsesår, genre, skuespillere, osv.)*
+(*Titlen på filmen, et billede af filmplakaten, og lidt information trukket fra filmdatabasen. Der er ingen krav om hvilken information, men kunne f.eks. være udgivelsesår, genre, skuespillere, osv.)*
 
 ### Frontend
-- Applikationen er allerede forudinstalleret med [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/).
+- Applikationen er allerede forudinstalleret med [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 - Der er ikke nogle krav til æstetikken af frontenden. Applikationen skal blot være funktionel, og facilitere de krav der er nævnt under _Backend_-afsnittet.
 
 ### Tests
