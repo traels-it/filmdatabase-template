@@ -1,4 +1,4 @@
-# Filmdatabase Code Challenge
+# 🎞 Filmdatabase Code Challenge
 
 Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film man godt kan lide. Man skal kunne oprette film, tilføje plakater og lave integration til en filmdatabase, som kan trække information ud om hver film.
 
