@@ -24,14 +24,13 @@ Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film m
 ### Tests
 
 - **Integration**: _Tests der viser at listen af film virker, og at man kan oprette og slette film fra samlingen._
-
 - **Model**: _Tests der viser at metoderne der bliver defineret på modellerne virker korrekt._
 
 
 ## Aflevering af opgaven
 Send dit Replit link til job@traels.it senest dagen før samtalen.
 
-## Hjælp og resourcer
+## Hjælp og ressourcer
 > Hvis det er første gang at du arbejder med Ruby og Rails, er her en samling af links der kan være nyttige, til at komme godt i gang.
 
 * [Den officielle "Getting Started" guide til Rails](https://guides.rubyonrails.org/getting_started.html)
