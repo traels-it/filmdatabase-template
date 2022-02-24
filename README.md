@@ -22,10 +22,11 @@ Opgaven er at lave en filmdatabase, som fungerer som opslagsværk over de film m
 - Der er ikke nogle krav til æstetikken af frontenden. Applikationen skal blot være funktionel, og facilitere de krav der er nævnt under _Backend_-afsnittet.
 
 ### Tests
-- **System test**:
-*Vi vil rigtig gerne se en system-test der kører igennem at oprette en film i databasen. Testen må gerne vise både flowet til oprettelsen af en film samt at kaldet til API'et har fået hentet de rigtige data.*
-- **Integration og model test (*valgfri*)**:
-*En model test der viser de metoder der måtte blive oprettet på modellerne, og en integration test der viser at kaldet til hver controller action går som de skal.*
+
+- **Integration**: _Tests der viser at listen af film virker, og at man kan oprette og slette film fra samlingen._
+
+- **Model**: _Tests der viser at metoderne der bliver defineret på modellerne virker korrekt._
+
 
 ## Aflevering af opgaven
 Send dit Replit link til job@traels.it senest dagen før samtalen.
