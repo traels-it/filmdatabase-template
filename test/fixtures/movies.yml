@@ -2,18 +2,20 @@
 
 one:
   title: MyString
-  release_date: 2022-02-26 11:43:59
+  release_date: 01/01/1990, 11:43
   genre: MyString
   director: MyString
   actors: MyString
   plot: MyText
-  image_url: MyString
+  image_url: https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
 
 two:
   title: MyString
-  release_date: 2022-02-26 11:43:59
+  release_date: 26/11/2020, 23:43
   genre: MyString
   director: MyString
   actors: MyString
   plot: MyText
-  image_url: MyString
+  image_url: https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+

@@ -10,23 +10,6 @@ class MoviesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Movies"
   end
 
-  test "should create movie" do
-    visit movies_url
-    click_on "New movie"
-
-    fill_in "Actors", with: @movie.actors
-    fill_in "Director", with: @movie.director
-    fill_in "Genre", with: @movie.genre
-    fill_in "Image url", with: @movie.image_url
-    fill_in "Plot", with: @movie.plot
-    fill_in "Release date", with: @movie.release_date
-    fill_in "Title", with: @movie.title
-    click_on "Create Movie"
-
-    assert_text "Movie was successfully created"
-    click_on "Back"
-  end
-
   test "should update Movie" do
     visit movie_url(@movie)
     click_on "Edit this movie", match: :first
@@ -38,7 +21,7 @@ class MoviesTest < ApplicationSystemTestCase
     fill_in "Plot", with: @movie.plot
     fill_in "Release date", with: @movie.release_date
     fill_in "Title", with: @movie.title
-    click_on "Update Movie"
+    click_on "Submit"
 
     assert_text "Movie was successfully updated"
     click_on "Back"
