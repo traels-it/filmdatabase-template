@@ -6,6 +6,6 @@ module MoviesHelper
   end
 
   def search_for_movies(query)
-    HTTParty.get("#{BASE_URL}?apikey=#{ENV["OMDB_API_KEY"]}&s=#{query}")
+    query.nil? ? nil : HTTParty.get("#{BASE_URL}?apikey=#{ENV["OMDB_API_KEY"]}&s=#{query}")
   end
 end

@@ -1,0 +1,13 @@
+<p style="color: red"><%= alert %></p>
+
+<h1>Search for a movie to add</h1>
+<%= form_with(url: "/omdb_movies", method: "get") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query, "", class: "form-control", :required => 'required') %>
+  <%= submit_tag("Search", :class=>"btn btn-primary theme-color") %>
+<% end %>
+
+<br>
+<br>
+
+<%= render "results", movie: @movie %>
