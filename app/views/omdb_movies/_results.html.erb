@@ -1,5 +1,3 @@
-<% @result = search_for_movies(params[:query]) %>
-
 <% if !@result.nil? %>
 
     <% if @result["Response"] == "False" %>
@@ -14,6 +12,7 @@
             <img width="200" height="200" src="<%= r["Poster"] %>"/>
             <h5><%= r["Title"] %></h5>
 
+            <%# TODO: We want this in the controller, but how to structure that? %>
             <% @json = get_omdb_json(r["imdbID"]) %>
 
             <%= form.hidden_field :title, value: @json['Title'] %>
