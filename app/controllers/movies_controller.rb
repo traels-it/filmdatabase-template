@@ -1,7 +1,8 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: %i[show edit update destroy]
 
-  def search; end
+  def search
+  end
 
   def result
     @movie = Movie.new
@@ -13,7 +14,8 @@ class MoviesController < ApplicationController
   end
 
   # GET /movies/1 or /movies/1.json
-  def show; end
+  def show
+  end
 
   # GET /movies/new
   def new
@@ -21,7 +23,8 @@ class MoviesController < ApplicationController
   end
 
   # GET /movies/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /movies or /movies.json
   def create
@@ -61,13 +64,14 @@ class MoviesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_movie
-      @movie = Movie.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def movie_params
-      params.require(:movie).permit(:title, :release_date, :genre, :director, :actors, :plot, :image_url)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def movie_params
+    params.require(:movie).permit(:title, :release_date, :genre, :director, :actors, :plot, :image_url)
+  end
 end
