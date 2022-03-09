@@ -8,6 +8,6 @@ class OmdbMoviesController < ApplicationController
   BASE_URL = "http://www.omdbapi.com/"
 
   def search_for_movies(query)
-    query.nil? ? nil : HTTParty.get("#{BASE_URL}?apikey=#{ENV["OMDB_API_KEY"]}&s=#{query}")
+    query.nil? ? nil : HTTParty.get("#{BASE_URL}?apikey=#{Rails.application.credentials.omdb_api_key}&s=#{query}")
   end
 end
