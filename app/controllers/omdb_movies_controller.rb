@@ -1,4 +1,4 @@
-class OmdbMoviesController < ApplicationController
+class OMDBMoviesController < ApplicationController
   def index
     @result = params[:query].nil? ? nil : search_for_movies(params[:query])
   end
