@@ -12,20 +12,20 @@ class MovieFlowTest < ActionDispatch::IntegrationTest
 
   test "can add movie" do
     assert_difference("Movie.count") do
-      post "/movies",
-        params: {movie: {title: "Can Create",
-                         release_date: "25 Jun 1982",
-                         genre: "A Genre",
-                         director: "A Director",
-                         actors: "An Actor",
-                         plot: "A Plot",
-                         image_url: "A url"}}
-    end
+      VCR.use_cassette("post_imdb_id") do
+        post "/omdb_import",
+          params: {
+            movie: {
+              imdb_id: "tt0094432"
+            }
+          }
+      end
 
-    assert_response :redirect
-    follow_redirect!
-    assert_response :success
-    assert_select "p", "Movie was successfully created."
+      assert_response :redirect
+      follow_redirect!
+      assert_response :success
+      assert_select "p", "Movie was successfully created."
+    end
   end
 
   test "can delete movie" do

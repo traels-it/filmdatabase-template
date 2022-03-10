@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=ec2d03b2&i=tt0094432
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 10 Mar 2022 09:42:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Wed, 09 Mar 2022 08:01:39 GMT
+      Last-Modified:
+      - Wed, 09 Mar 2022 07:01:39 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '96078'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6e9b1a73e89b95de-ARN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IkNoZWxtc2ZvcmQgMTIzIiwiWWVhciI6IjE5ODjigJMxOTkwIiwiUmF0ZWQiOiJOL0EiLCJSZWxlYXNlZCI6IjA5IE1hciAxOTg4IiwiUnVudGltZSI6IjMwIG1pbiIsIkdlbnJlIjoiQ29tZWR5IiwiRGlyZWN0b3IiOiJOL0EiLCJXcml0ZXIiOiJOL0EiLCJBY3RvcnMiOiJKaW1teSBNdWx2aWxsZSwgUm9yeSBNY0dyYXRoLCBQaGlsaXAgUG9wZSIsIlBsb3QiOiJTaXRjb20gc2V0IGluIHRoZSB0b3duIG9mIENoZWxtc2ZvcmQsIGJ1dCBpbiB0aGUgeWVhciBBRCAxMjMuIFRoZSBzaG93IG1haW5seSByZXZvbHZlcyBhcm91bmQgdGhlIHBvd2VyIHN0cnVnZ2xlIGJldHdlZW4gdGhlIG5ld2x5IGFwcG9pbnRlZCBSb21hbiBHb3Zlcm5vciBvZiBCcml0YWluLCBBdWx1cyBQYXVsaW51cywgYW5kIHRoZSBzY2hlbWluZyBsb2NhbCBCcml0aXNoIGNoaWVmdGFpbiBCYWR2b2MuIiwiTGFuZ3VhZ2UiOiJMYXRpbiwgRW5nbGlzaCIsIkNvdW50cnkiOiJVbml0ZWQgS2luZ2RvbSIsIkF3YXJkcyI6Ik4vQSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNak0zTWpNeE5qRTVObDVCTWw1QmFuQm5Ya0Z0WlRnd05EZzRPVGMxTkRFQC5fVjFfU1gzMDAuanBnIiwiUmF0aW5ncyI6W3siU291cmNlIjoiSW50ZXJuZXQgTW92aWUgRGF0YWJhc2UiLCJWYWx1ZSI6IjguMC8xMCJ9XSwiTWV0YXNjb3JlIjoiTi9BIiwiaW1kYlJhdGluZyI6IjguMCIsImltZGJWb3RlcyI6IjI4OCIsImltZGJJRCI6InR0MDA5NDQzMiIsIlR5cGUiOiJzZXJpZXMiLCJ0b3RhbFNlYXNvbnMiOiIyIiwiUmVzcG9uc2UiOiJUcnVlIn0=
+  recorded_at: Thu, 10 Mar 2022 09:42:57 GMT
+recorded_with: VCR 6.0.0

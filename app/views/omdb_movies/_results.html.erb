@@ -6,22 +6,13 @@
 
     <% @result['Search'].each do |r| %>
 
-        <%= form_with(model: Movie, url: "/movies") do |form| %>
+        <%= form_with(model: Movie, url: "/omdb_import") do |form| %>
 
         <div class="card-header">
             <img width="200" height="200" src="<%= r["Poster"] %>"/>
             <h5><%= r["Title"] %></h5>
 
-            <%# TODO: We want this in the controller, but how to structure that? %>
-            <% @json = get_omdb_json(r["imdbID"]) %>
-
-            <%= form.hidden_field :title, value: @json['Title'] %>
-            <%= form.hidden_field :release_date, value: @json['Released'] %>
-            <%= form.hidden_field :genre, value: @json['Genre'] %>
-            <%= form.hidden_field :director, value: @json['Director'] %>
-            <%= form.hidden_field :actors, value: @json['Actors'] %>
-            <%= form.hidden_field :plot, value: @json['Plot'] %>
-            <%= form.hidden_field :image_url, value: @json['Poster'] %>
+            <%= form.hidden_field :imdb_id, value: r['imdbID'] %>
 
             <div class="actions">
             <%= form.submit 'Add', class: "btn btn-primary theme-color" %>
