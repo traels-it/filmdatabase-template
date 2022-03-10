@@ -1,2 +1,2 @@
-module OmdbMoviesHelper
+module OMDBMoviesHelper
 end
