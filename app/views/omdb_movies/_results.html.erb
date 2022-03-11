@@ -1,28 +1,24 @@
 <% if !@result.nil? %>
 
-    <% if @result["Response"] == "False" %>
+  <% if @result["Response"] == "False" %>
     <% controller.redirect_to omdb_movies_path, alert: "No results found for #{params[:query]}."%>
-    <% else %>
+  <% else %>
 
+    
     <% @result['Search'].each do |r| %>
 
-        <%= form_with(model: Movie, url: "/omdb_import") do |form| %>
+      <div class="card-header">
+        <img width="200" height="200" src="<%= r["Poster"] %>"/>
+        <h5><%= r["Title"] %></h5>
 
-        <div class="card-header">
-            <img width="200" height="200" src="<%= r["Poster"] %>"/>
-            <h5><%= r["Title"] %></h5>
+        <%= button_to("Add",
+          {action: "create", controller: "omdb_import", imdb_id: r["imdbID"]},
+          {method: "post", class: "btn btn-primary theme-color"})
+        %>
+      </div>
 
-            <%= form.hidden_field :imdb_id, value: r['imdbID'] %>
-
-            <div class="actions">
-            <%= form.submit 'Add', class: "btn btn-primary theme-color" %>
-            </div>
-        </div>
-        <br>
-
-        <% end %>
+      <br>        
 
     <% end %>
-
-    <% end %>
+  <% end %>
 <% end %>

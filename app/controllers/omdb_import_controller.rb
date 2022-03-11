@@ -1,6 +1,7 @@
 class OMDBImportController < ApplicationController
   def create
-    movie_json = get_omdb_json(params["movie"]["imdb_id"])
+    print("params: #{params}")
+    movie_json = get_omdb_json(params["imdb_id"])
 
     movie = Movie.new(
       title: movie_json["Title"],
