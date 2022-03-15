@@ -11,7 +11,7 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   VCR.configure do |config|
-    config.allow_http_connections_when_no_cassette = false
+    config.allow_http_connections_when_no_cassette = true
     config.cassette_library_dir = File.expand_path("cassettes", __dir__)
     config.hook_into :webmock
     config.ignore_request { ENV["DISABLE_VCR"] }

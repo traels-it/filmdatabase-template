@@ -29,8 +29,7 @@ class MoviesTest < ApplicationSystemTestCase
 
   test "should destroy Movie" do
     visit movie_url(@movie)
-    click_on "Destroy this movie", match: :first
-
-    assert_text "Movie was successfully destroyed"
+    click_on "Remove this movie", match: :first
+    assert_text "Movie was successfully removed"
   end
 end
