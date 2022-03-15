@@ -3,8 +3,6 @@
   <% if @result["Response"] == "False" %>
     <% controller.redirect_to omdb_movies_path, alert: "No results found for #{params[:query]}."%>
   <% else %>
-
-    
     <% @result['Search'].each do |r| %>
 
       <div class="card-header">
@@ -17,7 +15,7 @@
         %>
       </div>
 
-      <br>        
+      <br>    
 
     <% end %>
   <% end %>

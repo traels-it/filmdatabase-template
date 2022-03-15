@@ -1,6 +1,7 @@
 # Problem with ruby 3.1.1 and VCR.
 # Should be patched, but no release yet.
 # This fixes it, and should probably be removed after next major VCR patch
+# From: https://github.com/vcr/vcr/pull/907#issuecomment-1038958113
 
 # frozen_string_literal: true
 
