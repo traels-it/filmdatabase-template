@@ -2,10 +2,8 @@ require "test_helper"
 
 class OMDBMoviesControllerTest < ActionDispatch::IntegrationTest
   test "can delete movie" do
-    VCR.use_cassette("post_imdb_id") do
-      assert_difference("Movie.count", -1) do
-        delete movie_url(movies.first)
-      end
+    assert_difference("Movie.count", -1) do
+      delete movie_url(movies.first)
     end
     assert_response :redirect
     follow_redirect!
