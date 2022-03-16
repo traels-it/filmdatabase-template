@@ -4,10 +4,7 @@ class OMDBImportControllerTest < ActionDispatch::IntegrationTest
   test "can add movie" do
     assert_difference("Movie.count") do
       VCR.use_cassette("post_imdb_id") do
-        post "/omdb_import",
-          params: {
-            imdb_id: "tt0094432"
-          }
+        post omdb_import_path, params: {imdb_id: "tt0094432"}
       end
 
       assert_response :redirect
