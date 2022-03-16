@@ -6,7 +6,7 @@
     <% @result['Search'].each do |r| %>
 
       <div class="card-header">
-        <img width="200" height="200" src="<%= r["Poster"] %>"/>
+        <img width="200" height="200" src="<%= r["Poster"] != "N/A" ? r["Poster"] : "#" %>"/>
         <h5><%= r["Title"] %></h5>
 
         <%= button_to("Add",
