@@ -1,6 +1,10 @@
 require "application_system_test_case"
 
 class OMDBMoviesTest < ApplicationSystemTestCase
+  setup do
+    VCR.insert_cassette("omdb_import_cassette", record: :new_episodes)
+  end
+
   test "can visit search" do
     visit omdb_movies_url
     assert_selector "h1", text: "Search for a movie to add"
@@ -9,9 +13,13 @@ class OMDBMoviesTest < ApplicationSystemTestCase
   test "should add movie" do
     visit movies_url
     click_on "Add movie"
-    fill_in "query", with: "123" # TODO: Better place to set "123"?
+    fill_in "query", with: "123"
     click_on "Search"
-    click_on "Add" # TODO: Problem here, page not loaded yet? Visit site directly with params?
-    assert_text "Movie was successfully created"
+    first(".card-header").click_on("Add")
+    assert_selector "p", text: "Movie was successfully created."
+  end
+
+  teardown do
+    VCR.eject_cassette
   end
 end
