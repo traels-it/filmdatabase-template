@@ -19,5 +19,11 @@ class ActiveSupport::TestCase
     config.default_cassette_options = {
       record: :new_episodes
     }
+
+    # Allow downloading webdrivers for Selenium
+    driver_hosts = Webdrivers::Common.subclasses.map { |driver| URI(driver.base_url).host }
+    # Downloading the Firefox driver involves a redirect
+    driver_hosts += ["github-releases.githubusercontent.com"]
+    config.ignore_hosts(*driver_hosts)
   end
 end
