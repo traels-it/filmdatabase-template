@@ -1,9 +1,9 @@
 let searchResults;
-document.addEventListener('turbo:load', function () {	
+document.addEventListener('turbo:load', function () {
   if (document.getElementById('movie_title')) {
 		new Autocomplete('movie_title', {
 		  onSearch: ({ currentValue }) => {
-		    const api = `https://www.omdbapi.com/?apikey=28e67bb&type=movie&s=` + currentValue;
+        const api = `https://www.omdbapi.com/?apikey=28e67bb&type=movie&s=` + currentValue;
 		    return new Promise((resolve) => {
 		      fetch(api)
 		        .then((response) => response.json())
@@ -38,7 +38,7 @@ document.addEventListener('turbo:load', function () {
 				.catch((error) => {
 					console.error(error);
 				});
-		
+
 
 			}
 		});

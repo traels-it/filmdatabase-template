@@ -42,7 +42,33 @@ body {
 .field_with_errors input {
 	border: 1px solid red;
  }
- 
+
 .field_with_errors .alert {
 	margin: -100px 0 0 0;
+}
+
+#form input {
+	width: 300px;
+}
+
+#showResults {
+	background-color: #ffffff;
+	position: absolute;
+	margin: 10px 0 0 0;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #d2d2d2;
+}
+
+#showResults table {
+	width: 100%;
+}
+
+#showResults td {
+	padding: 5px 0 5px 5px;
+}
+
+#showResults td:hover {
+	background-color: #d2d2d2;
+	cursor: pointer;
 }
