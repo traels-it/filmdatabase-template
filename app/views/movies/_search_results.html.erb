@@ -5,7 +5,7 @@
     <table>
       <% @results.each do |movie| %>
       <tr>
-         <td><%= movie.title %></td>
+        <td><%= link_to movie.title, new_movie_path(omdb_id: movie.imdb_id) %></td>
       </tr>
       <% end %>
     </table>

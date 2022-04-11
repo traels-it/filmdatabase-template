@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
 
+  before_action :fetch
+
   def index
     @movies = Movie.all
   end
@@ -9,7 +11,6 @@ class MoviesController < ApplicationController
   end
 
   def search
-    @client = Omdb::Api::Client.new(api_key: "28e67bb")
     respond_to do |format|
       format.turbo_stream do
         @results = @client.search(params[:title_search])
@@ -20,6 +21,14 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    if params[:omdb_id]
+      @movie_details = @client.find_by_id(params[:omdb_id])
+      @movie.url = @movie_details.poster
+      @movie.title = @movie_details.title
+      @movie.year = @movie_details.year
+      @movie.genre = @movie_details.genre
+      @movie.director = @movie_details.director
+    end
   end
 
   def create
@@ -56,5 +65,9 @@ class MoviesController < ApplicationController
   private
     def movie_params
       params.require(:movie).permit(:title, :year, :genre, :director, :url)
+    end
+
+    def fetch
+      @client = Omdb::Api::Client.new(api_key: "28e67bb")
     end
 end

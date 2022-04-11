@@ -5,17 +5,25 @@
 </div>
 
 <div id="search_results">
-
+	
 </div>
+<br>
+<br>
 
 <%= form_with model: movie do |form| %>
-<div>
+
+	<% if @movie.url %>
+		<%= image_tag(@movie.url, id: "movie_poster") %>
+	<% else %>
+	<% end %>
+
 	<%= form.text_field :url %>
-</div>
+	<br><br>
+	<%= form.label :title %><br>
+	<%= form.text_field :title %><br><br>
 	<% movie.errors.full_messages_for(:title).each do |message| %>
 		<div class="alert alert-danger"><%= message %></div>
 	<% end %>
-	<br>
 	<%= form.label :year %><br>
 	<%= form.text_field :year %><br><br>
 	<% @movie.errors.full_messages_for(:year).each do |message| %>
