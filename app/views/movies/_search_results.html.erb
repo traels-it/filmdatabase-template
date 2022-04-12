@@ -1,11 +1,11 @@
-
-
 <% if @results.is_a? Omdb::Api::Collection %>
   <div id="showResults">
     <table>
       <% @results.each do |movie| %>
       <tr>
-        <td><%= link_to movie.title, new_movie_path(omdb_id: movie.imdb_id) %></td>
+        <td>
+            <%= link_to movie.title, "#{params[:return_url]}?omdb_id=#{movie.imdb_id}" %>
+        </td>
       </tr>
       <% end %>
     </table>

@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    @return_path = new_movie_path
     if params[:omdb_id]
       @movie_details = @client.find_by_id(params[:omdb_id])
       @movie.url = @movie_details.poster
@@ -43,6 +44,15 @@ class MoviesController < ApplicationController
 
   def edit
     @movie = Movie.find(params[:id])
+    @return_path = edit_movie_path(@movie)
+    if params[:omdb_id]
+      @movie_details = @client.find_by_id(params[:omdb_id])
+      @movie.url = @movie_details.poster
+      @movie.title = @movie_details.title
+      @movie.year = @movie_details.year
+      @movie.genre = @movie_details.genre
+      @movie.director = @movie_details.director
+    end
   end
 
   def update
