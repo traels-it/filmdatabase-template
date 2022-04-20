@@ -1,5 +1,4 @@
 class MoviesController < ApplicationController
-
   before_action :fetch
 
   def index
@@ -14,7 +13,7 @@ class MoviesController < ApplicationController
     respond_to do |format|
       format.turbo_stream do
         @results = @client.search(params[:title_search])
-        render turbo_stream: turbo_stream.update("search_results", partial: "movies/search_results", locals: { client: @client })
+        render turbo_stream: turbo_stream.update("search_results", partial: "movies/search_results", locals: {client: @client})
       end
     end
   end
@@ -56,13 +55,13 @@ class MoviesController < ApplicationController
   end
 
   def update
-   @movie = Movie.find(params[:id])
+    @movie = Movie.find(params[:id])
 
-   if @movie.update(movie_params)
-     redirect_to movies_path
-   else
-     render :edit, status: :unprocessable_entity
-   end
+    if @movie.update(movie_params)
+      redirect_to movies_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -73,11 +72,12 @@ class MoviesController < ApplicationController
   end
 
   private
-    def movie_params
-      params.require(:movie).permit(:title, :year, :genre, :director, :url)
-    end
 
-    def fetch
-      @client = Omdb::Api::Client.new(api_key: "28e67bb")
-    end
+  def movie_params
+    params.require(:movie).permit(:title, :year, :genre, :director, :url)
+  end
+
+  def fetch
+    @client = Omdb::Api::Client.new(api_key: "28e67bb")
+  end
 end
