@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+	padding: 100px;
+}
+
+.movieLink {
+  font-weight: bold;
+  padding: 0 0 0 5px;
+}
+
+.link {
+  font-style: italic;
+}
+
+#movie_url {
+	visibility: hidden;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors input {
+	border: 1px solid red;
+ }
+
+.field_with_errors .alert {
+	margin: -100px 0 0 0;
+}
+
+#form input {
+	width: 300px;
+}
+
+#movie_poster {
+	position: absolute;
+	margin: 80px 0 0 320px;
+	height: 256px;
+}
+
+#showResults {
+	background-color: #ffffff;
+	position: absolute;
+	margin: 10px 0 0 0;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #d2d2d2;
+}
+
+#showResults table {
+	width: 100%;
+}
+
+#showResults td {
+}
+
+#showResults td:hover {
+	background-color: #d2d2d2;
+	cursor: pointer;
+}
+
+#showResults a {
+	text-decoration: none;
+	color: #141414;
+	padding: 5px;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+#return_url {
+	visibility: hidden;
+}

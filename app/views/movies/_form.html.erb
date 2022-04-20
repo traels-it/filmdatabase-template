@@ -1,0 +1,42 @@
+<div id="form">
+	<%= form_with url: search_movies_path, method: :post do |f| %>
+		<%= f.search_field :title_search, oninput: "this.form.requestSubmit()", placeholder: "Search Movie title" %>
+		<%= f.text_field :return_url, value: @return_path %>
+	<% end %>
+</div>
+
+<div id="search_results">
+</div>
+<br>
+<br>
+
+<div data-controller="poster">
+	<%= form_with model: movie do |form| %>
+		<%= image_tag("", id: "movie_poster", data: { 'poster-target' => "image" }) %>
+		<%= form.text_field :url, data: { 'poster-target' => "url" } %>
+		<br><br>
+		<%= form.label :title %><br>
+		<%= form.text_field :title %><br><br>
+		<% movie.errors.full_messages_for(:title).each do |message| %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% end %>
+		<%= form.label :year %><br>
+		<%= form.text_field :year %><br><br>
+		<% @movie.errors.full_messages_for(:year).each do |message| %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% end %>
+		<%= form.label :genre %><br>
+		<%= form.text_field :genre %><br><br>
+		<% movie.errors.full_messages_for(:genre).each do |message| %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% end %>
+		<%= form.label :director %><br>
+		<%= form.text_field :director %><br><br>
+		<% movie.errors.full_messages_for(:director).each do |message| %>
+			<div class="alert alert-danger"><%= message %></div>
+		<% end %>
+	<div>
+		<%= form.submit :class => 'btn btn-primary' %>
+	</div>
+	<% end %>
+</ div>
