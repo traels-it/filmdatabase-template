@@ -20,7 +20,7 @@ module RailsRuby3
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.action_dispatch.default_headers = {
-      'X-Frame-Options' => 'ALLOWFROM replit.com'
+      "X-Frame-Options" => "ALLOWFROM replit.com"
     }
   end
 end
