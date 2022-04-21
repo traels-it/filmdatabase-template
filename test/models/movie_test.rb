@@ -7,7 +7,6 @@ class MovieTest < ActiveSupport::TestCase
 
     #Act
     movie.save
-<<<<<<< HEAD
 
     #Assert
     it "Should not save movie without title" do
@@ -26,15 +25,5 @@ class MovieTest < ActiveSupport::TestCase
       _(movie.errors.attribute_names).must_include(:director)
     end
   
-=======
-    assert movie.errors.attribute_names.include?(:title),
-      "Should not save movie without title"
-    assert movie.errors.attribute_names.include?(:year),
-      "Should not save movie without year"
-    assert movie.errors.attribute_names.include?(:genre),
-      "Should not save movie without genre"
-    assert movie.errors.attribute_names.include?(:director),
-      "Should not save movie without director"
->>>>>>> stimulus-implementation
   end
 end
